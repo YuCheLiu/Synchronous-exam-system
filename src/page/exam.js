@@ -6,15 +6,14 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 const LoginButton = () => {
   const { loginWithRedirect } = useAuth0();
-  loginWithRedirect()
-  //return <button onClick={() => loginWithRedirect()}>Log In app</button>;
+  //loginWithRedirect()
+  return <button onClick={() => loginWithRedirect()}>Log In app</button>;
 };
 
 export class Exam extends Component {
     render() {
         return(
             <div className='page'>
-                <LoginButton></LoginButton>
                 <body class="text-center">
                     <main class="form-signin">
                         <form>
@@ -35,7 +34,7 @@ export class Exam extends Component {
                                 <input type="checkbox" value="remember-me" /> Remember me
                             </label>
                             </div>
-                            <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+                            <LoginButton class="w-100 btn btn-lg btn-primary"></LoginButton>
                         </form>
                     </main>
                 </body>            

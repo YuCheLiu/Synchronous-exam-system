@@ -32,7 +32,6 @@ export class Navbar extends Component {
                                 <Link class="nav-link text-white" to="/about">About</Link>
                             </li>
                         </ul>
-                        
                         </div>
                     </div>
                 </nav>
