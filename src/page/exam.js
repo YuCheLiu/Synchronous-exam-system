@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
 import '../css/signin.css'
 import '../css/page.css'
+import { auth } from '../auth/auth';
+import { useAuth0 } from "@auth0/auth0-react";
+
+const LoginButton = () => {
+  const { loginWithRedirect } = useAuth0();
+  loginWithRedirect()
+  //return <button onClick={() => loginWithRedirect()}>Log In app</button>;
+};
 
 export class Exam extends Component {
     render() {
         return(
             <div className='page'>
+                <LoginButton></LoginButton>
                 <body class="text-center">
                     <main class="form-signin">
                         <form>
