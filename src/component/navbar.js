@@ -8,6 +8,11 @@ import {
 import { About } from '../page/about';
 import { Exam } from '../page/exam';
 import { Home } from '../page/home';
+import { Member } from '../page/member';
+import { useAuth0 } from "@auth0/auth0-react";
+import MemberCenter from './member-center';
+
+
 
 export class Navbar extends Component {
     render() {
@@ -31,6 +36,7 @@ export class Navbar extends Component {
                             <li class="nav-item">
                                 <Link class="nav-link text-white" to="/about">About</Link>
                             </li>
+                            <MemberCenter></MemberCenter>                            
                         </ul>
                         </div>
                     </div>
@@ -44,6 +50,9 @@ export class Navbar extends Component {
                         </Route>
                         <Route path="/about">
                             <About />
+                        </Route>
+                        <Route path="/member">
+                            <Member />
                         </Route>
                     </Switch>
                 </Router>
